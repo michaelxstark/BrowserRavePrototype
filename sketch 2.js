@@ -12,8 +12,8 @@ function setup() {
   pixelDensity(1);
 
   button = createButton('Stop and Destroy');
-  button.position(0, 0);
-  button.size(100, 100);
+  button.position(0, 110);
+  button.size(100, 20);
   button.mousePressed(noLoop);
 
   filterF = new p5.Filter();
