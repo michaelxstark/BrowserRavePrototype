@@ -12,6 +12,8 @@ function setup() {
   pixelDensity(1);
 
   button = createButton('Stop and Destroy');
+  button.position(0, 0);
+  button.size(100, 100);
   button.mousePressed(noLoop);
 
   filterF = new p5.Filter();
@@ -60,7 +62,7 @@ function draw() {
 function playSynth() {
   userStartAudio();
 
-  noteQ1 = [60, 63, 70];
+  noteQ1 = [48, 63, 70];
   noteQ2 = [56, 67, 75];
   noteQ3 = [36, 43, 50];
   noteQ4 = [86, 87, 79];
@@ -85,7 +87,7 @@ function playSynth() {
     stroke(200, 100, 10);
   }
 
-  note -= 2;
+  //note -= 2;
 
   freqM = 440 * Math.pow(2, (note - 69) / 12)
 
