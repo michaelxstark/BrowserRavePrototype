@@ -14,6 +14,9 @@ function setup() {
   button = createButton('Stop and Destroy');
   button.position(0, 150);
   button.size(200, 20);
+  button.style('background-color', color(0));
+  button.style('font-size', '18px');
+  button.style('color', color(255));
   button.mousePressed(noLoop);
 
   filterF = new p5.Filter();
