@@ -8,12 +8,11 @@ let noteQ4;
 
 function setup() {
 
-  button = createButton('Stop and Destroy');
-  button.mousePressed(noLoop);
-
   createCanvas(windowWidth, windowHeight);
   pixelDensity(1);
 
+  button = createButton('Stop and Destroy');
+  button.mousePressed(noLoop);
 
   filterF = new p5.Filter();
   filterF.setType('lowpass');
@@ -49,7 +48,7 @@ function draw() {
   if (frameCount % 7 == 0){
     let choice = random() * 100
 
-    if (choice < 70){
+    if (choice < 60){
       playSynth();
       circle(width/2, height/2, random() * 500 + 50);
     }
@@ -61,7 +60,7 @@ function draw() {
 function playSynth() {
   userStartAudio();
 
-  noteQ1 = [48, 63, 70];
+  noteQ1 = [60, 63, 70];
   noteQ2 = [56, 67, 75];
   noteQ3 = [36, 43, 50];
   noteQ4 = [86, 87, 79];
@@ -86,7 +85,7 @@ function playSynth() {
     stroke(200, 100, 10);
   }
 
-  //note -= 2;
+  note -= 2;
 
   freqM = 440 * Math.pow(2, (note - 69) / 12)
 
